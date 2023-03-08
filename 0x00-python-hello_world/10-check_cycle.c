@@ -2,7 +2,7 @@
 
 /**
  * check_cycle - checks for cycle in linked list
- * lists: linked list to check
+ * list: linked list to check
  * Return: 0 if there is no cycle, 1 otherwise.
  */
 
