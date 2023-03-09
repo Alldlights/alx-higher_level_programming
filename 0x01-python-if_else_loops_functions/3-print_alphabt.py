@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""print all the letters except q and e"""
+"""print all letters except q and e"""
 
 for ascii in range(97, 123):
     if chr(ascii) != 'q' and chr(ascii) != 'e':
