@@ -10,7 +10,7 @@ if __name__ == '__main__':
         sys.exit(1)
 
     a = int(sys.argv[1])
-    b = sys.argv[2]
+    op = sys.argv[2]
     c = int(sys.argv[3])
 
     if op == '+':
