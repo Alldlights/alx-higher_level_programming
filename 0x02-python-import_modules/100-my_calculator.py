@@ -14,13 +14,13 @@ if __name__ == '__main__':
     c = int(sys.argv[3])
 
     if op == '+':
-        print("{:d} {:s} {:d} = {:d}".format(a, op, b, add(a, b)))
+        print("{:d} {:s} {:d} = {:d}".format(a, op, c, add(a, c)))
     elif op == '-':
-        print("{:d} {:s} {:d} = {:d}".format(a, op, b, sub(a, b)))
+        print("{:d} {:s} {:d} = {:d}".format(a, op, c, sub(a, c)))
     elif op == '*':
-        print("{:d} {:s} {:d} = {:d}".format(a, op, b, mul(a, b)))
+        print("{:d} {:s} {:d} = {:d}".format(a, op, c, mul(a, c)))
     elif op == '/':
-        print("{:d} {:s} {:d} = {:d}".format(a, op, b, div(a, b)))
+        print("{:d} {:s} {:d} = {:d}".format(a, op, c, div(a, c)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
