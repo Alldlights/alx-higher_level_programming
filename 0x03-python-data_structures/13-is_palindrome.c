@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
+#include <stddef.h>
+
 /**
  * is_palindrome - checks if list is palindrome
  * @h: pointer to the pointer of first node of the listint_t list
@@ -9,41 +11,33 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
+	listint_t *node;
+	int values[9999], i = 0, c = 0;
 
-	if (*head == NULL || (*head)->next == NULL)
+	if ((!*head) || (!head))
+	{
 		return (1);
-
-	while (1)
-	{
-		fast = fast->next->next;
-		if (!fast)
-		{
-			dup = slow->next;
-			break;
-		}
-		if (!fast->next)
-		{
-			dup = slow->next->next;
-			break;
-		}
-		slow = slow->next;
 	}
-
-	reverse_listint(&dup);
-
-	while (dup && temp)
+	node = *head;
+	if (!node->next)
 	{
-		if (temp->n == dup->n)
+		return (1);
+	}
+	while (node)
+	{
+		values[i] = node->n;
+		node = node->next;
+		i++;
+	}
+	i--;
+	while (i >= 0 && c <= i)
+	{
+		if (values[i] != values[c])
 		{
-			dup = dup->next;
-			temp = temp->next;
-		}
-		else
 			return (0);
+		}
+		i--;
+		c++;
 	}
-
-	if (!dup)
-		return (1);
-	return (0);
+	return (1);
 }
