@@ -3,8 +3,8 @@
 
 def multiple_returns(sentence):
     lenght = len(sentence)
-    for i in sentence:
-        if lenght < 0:
-            return "None"
-        else:
-            return (lenght, i[0])
+    if lenght < 0:
+        return "None"
+    else:
+        f_s = sentence[0]
+        return (lenght, f_s)
