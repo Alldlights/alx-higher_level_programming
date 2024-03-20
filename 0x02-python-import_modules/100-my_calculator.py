@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     a = int(sys.argv[1])
     op = sys.argv[2]
-    b = int (sys.argv[3])
+    b = int(sys.argv[3])
 
     if op == '+':
         print("{:d} {:s} {:d} = {:d}".format(a, op, b, add(a, b)))
